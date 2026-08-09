@@ -1,11 +1,25 @@
-# Watermark Experiment Code
+# Beyond Heuristic Tuning: Power-Calibrated LLM Watermarking (ICML 2026)
 
-Note: `watermark_reliability_release/` is copied from
-`https://github.com/jwkirchenbauer/lm-watermarking/tree/main` and kept here as a
-local dependency for the experiment code.
+Official experiment code for the paper:
+
+> **Beyond Heuristic Tuning: Power-Calibrated LLM Watermarking**
+> Xiaopu Wang, Zelin He, Chengyuan Liu, Runze Li
+> *International Conference on Machine Learning (ICML), 2026*
+> [arXiv:2607.05694](https://arxiv.org/abs/2607.05694)
+
+We derive closed-form relationships linking logit-based watermark parameters to
+green-token rates, detection power, and KL distortion, replacing heuristic
+hyperparameter tuning with a constrained optimization procedure. Theoretical
+predictions match empirical green-token rates with R² > 0.98 across all
+model–dataset pairs, and the calibrated operating points are Pareto-optimal in
+the power–distortion trade-off.
 
 This repository contains the code needed to generate watermark experiment data,
 quality metrics, attack data, and figure data/plots.
+
+Note: `watermark_reliability_release/` is copied from
+[jwkirchenbauer/lm-watermarking](https://github.com/jwkirchenbauer/lm-watermarking)
+and kept here as a local dependency; it retains its original license.
 
 ## Contents
 
@@ -79,3 +93,14 @@ alpha,n_samples,gamma,delta,base_gamma
 Experiment JSON files are written under `results_final/` by default. Quality
 metric CSV files are written under `quality_metrics/` by default.
 
+
+## Citation
+
+```bibtex
+@inproceedings{wang2026power,
+  title     = {Beyond Heuristic Tuning: Power-Calibrated {LLM} Watermarking},
+  author    = {Wang, Xiaopu and He, Zelin and Liu, Chengyuan and Li, Runze},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2026}
+}
+```
